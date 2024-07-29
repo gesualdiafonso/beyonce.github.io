@@ -1,0 +1,2210 @@
+/* Importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'Optima';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/fonts/optima-webfont/OPTIMA.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Optima';
+    font-style: italic;
+    font-weight: normal;
+    src: url('/fonts/optima-webfont/Optima_Italic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Optima';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/optima-webfont/Optima Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Optima';
+    font-style: normal;
+    font-weight: bold;
+    src: url('/fonts/optima-webfont/OPTIMA_B.woff') format('woff');
+}
+
+/*************************************************************/
+/*************************************************************/
+/*************************************************************/
+/*------------------Header y Footer--------------------------*/
+/*************************************************************/
+/*************************************************************/
+/*************************************************************/
+/* Reset e estilo general*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1D0340;
+    min-width: 1280px;
+}
+#nav-bar{display: none;}
+#close{display: none;}
+
+/* Estilo del header */
+header {
+    width: 100%;
+    height: 200px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 33px;
+    position: relative;
+    z-index: 1; 
+}
+
+/* Fin de header */
+
+/* Logo */
+.logo_gray {
+    background-image: url(../image/logo/Beyonce-logo-grey.png);
+    width: 240px;
+    height: 133px;
+    margin: 33px 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-flex;
+}
+
+/* Fin de logo */
+
+/* Nav estilo */
+nav {
+    margin: 80px 33px;
+    font-size: 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #fff;
+    margin-left: auto; 
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    color: #fff; 
+}
+
+nav ul li ul.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #724B9A;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 2; 
+}
+
+nav ul li ul.dropdown li {
+    white-space: nowrap;
+}
+
+nav ul li:hover ul.dropdown {
+    display: block;
+}
+
+nav ul li ul.dropdown li a {
+    padding: 10px 20px;
+    border-bottom: 1px solid #D9D9D9;
+    color: white; 
+}
+
+nav ul li ul.dropdown li + li a {
+    margin-top: 5px;
+}
+
+nav ul li a:hover,
+nav ul li ul.dropdown li a:hover {
+    background-color: #FFD700; 
+}
+/* Fin de Nav */
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: var(--Outras-renascence, #2E5D99);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Designer Section */
+#designer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#designer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#designer ul li {
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-size: 18px;
+}
+
+/* Copyright Section */
+footer .copyright {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+footer .copyright p {
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-size: 18px;
+}
+
+/* Social Media Section */
+#socialmidia {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#socialmidia li {
+    display: inline-block;
+    margin: 0 8px;
+}
+
+#socialmidia li a span {
+    display: inline-block;
+    background: url(../image/icon/sprite.png);
+    width: 32px;
+    height: 32px;
+}
+
+/* Icon Hover Effects */
+#socialmidia #ig:hover { background-position: 0 -36px; }
+#socialmidia #tt { background-position: -37px 0; }
+#socialmidia #tt:hover { background-position: -37px -36px; }
+#socialmidia #ytb { background-position: -74px 0; }
+#socialmidia #ytb:hover { background-position: -74px -36px; }
+#socialmidia #applemusic { background-position: -111px 0; }
+#socialmidia #applemusic:hover { background-position: -111px -36px; }
+#socialmidia #spotify { background-position: -148px 0; }
+#socialmidia #spotify:hover { background-position: -148px -36px; }
+
+
+/*Fin de Footer*/
+
+
+/*************************************************************/
+/*************************************************************/
+/*************************************************************/
+/*-------------------Page de home----------------------------*/
+/*************************************************************/
+/*************************************************************/
+/*************************************************************/
+
+/* Desapareciendo Beyonce */
+#by-desap{
+    display: none;
+}
+/* Contenedor y generalidades */
+.as_back {
+    background-image: url(../image/back-desk.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 632px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: "Montserrat Subrayada", sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+    background: linear-gradient(90deg, #9A9A9A, #fff, #c0c0c0);
+    -webkit-background-clip: text;
+    text-align: center;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+strong, em {
+    color: #FFD700;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Fin del contenedor y generalidades */
+
+/* Contenido Beyonce */
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.foto-bey {
+    width: 392px;
+    height: 490px;
+    margin: 40px;
+}
+
+.biography {
+    flex: 1;
+    min-width: 420px;
+    background-color: #ffffff;
+    border-radius: 60px;
+    padding: 20px;
+    margin: 40px 0;
+}
+
+.biography h2 {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Optima', sans-serif;
+    background: linear-gradient(90deg, #e9a227, #f3de1ec2, #e9a227);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin: 20px 0;
+}
+
+.biography p {
+    color: black;
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    margin: 0 35px 25px;
+}
+
+.life {
+    width: 100%;
+    max-width: 1120px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.life-perso {
+    background-color: #2E5D99;
+    border-radius: 60px;
+    padding: 20px;
+}
+
+.life-perso h3 {
+    color: #FFD700;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.life-perso p {
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    text-align: justify;
+    margin: 0 35px 25px 35px;
+}
+
+.life .jayz {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.hijos {
+    width: 100%;
+    max-width: 1120px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 80px auto 0;
+}
+
+.hijos img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* animación */
+.hijos .blueive,
+.hijos .rumi,
+.hijos .sir {
+    transition: transform 0.3s ease; /* Suaviza a transição */
+}
+
+.hijos .blueive:hover {
+    transform: rotate(-3deg); /* Balança para a esquerda ao passar o mouse */
+}
+
+.hijos .rumi:hover {
+    transform: rotate(3deg); /* Balança para a direita ao passar o mouse */
+}
+
+.hijos .sir:hover {
+    transform: rotate(-2deg); /* Balança para a esquerda ao passar o mouse */
+}
+
+
+/*-----------R&B-----------*/
+
+#genero{
+    width: 1180px;
+    height: 1140px;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    background: linear-gradient(90deg, #6e3181, #81126c, #6e3181);
+    border: 2px solid #792f80;
+    border-radius: 20px;
+    position: relative;
+}
+#genero h2{
+    text-align: center;
+    font-size: 40px;
+    background: linear-gradient(90deg, #7a7a7a, #aaaaaa, #707070);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.genero-box{
+    width: 1080px;
+    height: 250px;
+    margin: 20px 50px;
+    padding: 10px 0;
+}
+.genero-box h3{
+    text-align: center;
+    font-size: 30px;
+    background: linear-gradient(90deg, #e9a227, #868686, #e9a227);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.genero-box p{
+    padding: 20px 0;
+    font-size: 20px;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    text-align: justify;
+}
+.genero-box li{
+    margin: 0 30px;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    text-align: justify;
+}
+.ryb-txt{
+    text-align: center;
+    font-size: 30px;
+    background: linear-gradient(90deg, #e9a227, #868686, #e9a227);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin: 80px 0 0 0;
+    padding: 0;
+}
+.ryb{
+    width: 1080px;
+    height: 667px;
+    margin: 50px 60px;
+    padding: 10px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.ryb-descripcion{
+    width: 300px;
+    height: 545px;
+    margin: 30px 0 35px 0 ;
+    background:  #1D0340;
+    border-radius: 20px;
+}
+.ryb-descripcion h4{
+    font-size: 30px;
+    color: white;
+    font-family: "Optima", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px 0;
+    padding: 0;
+}
+.ryb-descripcion p{
+    font-size: 18px;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    margin: 20px 30px;
+    padding: 0;
+}
+.ryb-origen{
+    width: 360px;
+    height: 545px;
+    margin: 30px 0 35px 0 ;
+    background: #1D0340;
+    border-radius: 20px;
+}
+.ryb-origen h4{
+    font-size: 30px;
+    color: white;
+    font-family: "Optima", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px 0;
+    padding: 0;
+}
+.ryb-origen p{
+    font-size: 18px;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    margin: 20px 30px;
+    padding: 0;
+}
+
+.ryb-caracteristica{
+    width: 360px;
+    height: 545px;
+    margin: 30px 20px 35px 20px ;
+    background: #1D0340;
+    border-radius: 20px;
+}
+.ryb-caracteristica h4{
+    font-size: 30px;
+    color: white;
+    font-family: "Optima", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px 0;
+    padding: 0;
+}
+.ryb-caracteristica p{
+    font-size: 18px;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    margin: 20px 30px;
+    padding: 0;
+}
+.ryb-descripcion:hover,
+.ryb-origen:hover,
+.ryb-caracteristica:hover {
+    transform: scale(1.05); 
+    transition: transform 0.3s ease; 
+    box-shadow: 0 0 10px rgba(122, 122, 122, 0.8); 
+    border: 2px solid #7a7a7a; 
+}
+
+/*Fin de contenido de beyonce*/
+
+/*------------Discografy Carrocel------------*/
+
+.discografia {
+    width: 100%;
+    max-width: 1120px;
+    height: auto; 
+    background: rgba(114, 75, 154, 0.50);
+    border-radius: 60px;
+    display: block; 
+    margin: 150px auto 100px; 
+    padding: 20px; 
+    text-align: center; 
+    position: relative; 
+}
+
+.discografia .ds__info {
+    width: auto;
+    margin: 50px auto; 
+    max-width: 900px; 
+}
+
+.discografia .ds__info h2 {
+    text-align: center;
+    font-size: 40px;
+    background: linear-gradient(90deg, #7a7a7a, #aaaaaa, #707070);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.discografia .ds__info p {
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Carrousel */
+.carousel {
+    width: 100%;
+    max-width: 900px; 
+    height: 350px;
+    overflow: hidden;
+    margin: 0 auto; 
+    position: relative; 
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-slide {
+    width: 380px;
+    height: 350px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    margin: 0 auto; 
+}
+
+.carousel-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+}
+
+.carousel-caption {
+    display: none;
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.carousel-slide:hover .carousel-caption {
+    display: block;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-button:focus {
+    outline: none;
+}
+/*Fin de discografia*/
+
+/* Renaissence World Tour */
+.renaissence {
+    width: 100%;
+    max-width: 1120px;
+    height: auto;
+    background: #131111;
+    border: 2px solid #9A9A9A;
+    border-radius: 58px;
+    margin: 40px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.renaissence h2 {
+    font-size: 40px;
+    font-family: 'Optima', sans-serif;
+    background: linear-gradient(90deg, #7a7a7a, #aaaaaa, #707070);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.renaissence p {
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    text-align: justify;
+    margin: 10px auto;
+    max-width: 800px;
+}
+
+.video,
+iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    margin: 10px auto;
+    border-radius: 20px;
+}
+/*Fin de Reinassance tour*/
+
+/* Galery*/
+/* Galeria */
+.gallery {
+    width: 100%;
+    max-width: 1120px;
+    height: auto;
+    border-radius: 40px;
+    border: 2px solid rgba(154, 154, 154, 0.50);
+    background: var(--Background-2, #000);
+    margin: 100px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.gallery h2 {
+    text-align: center;
+    font-size: 40px;
+    background: linear-gradient(90deg, #7a7a7a, #aaaaaa, #707070);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.image-section {
+    width: 100%;
+    max-width: 1065px;
+    height: auto;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s, z-index 0.3s;
+    animation: moveUpDown 2s infinite;
+}
+
+.image.integer-image {
+    height: 300px;
+}
+
+.image.float-image {
+    height: 250px;
+}
+
+.image:nth-child(even) {
+    animation-direction: alternate;
+}
+
+.image:hover {
+    transform: scale(1.5);
+    z-index: 10;
+    animation-play-state: paused;
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/*************************************************************/
+/*************************************************************/
+/*************************************************************/
+/*-------------------Page de discografia---------------------*/
+/*************************************************************/
+/*************************************************************/
+/*************************************************************/
+
+/* Estilo dos box y generalidades*/
+.container-disco{
+    width: 1100px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    padding: 0;
+    position: relative;
+}
+.container-disco h1{
+    font-family: "Montserrat Subrayada", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 80px;
+    background: linear-gradient(90deg, #9A9A9A, #fff, #c0c0c0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    text-align: center;
+    margin: 20px auto;
+}
+#box-cc, #box-rn, #box-bk, #box-lm, #box-bc{
+    width: 100%;
+    height: 1100px;
+    border-radius: 60px;
+    border: 2px solid var(--Renaissance, #9A9A9A);
+    margin: 40px 0 100px 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+#box-bc{
+    width: 100%;
+    height: 1150px;
+    border-radius: 60px;
+    border: 2px solid var(--Renaissance, #9A9A9A);
+    margin: 100px 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.elements{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 20px 0;
+    padding: 0 60px;
+}
+.box-txt{
+    width: 100%;
+    display: flex;
+}
+.box-txt p{
+    font-size: 20px;
+    color: white;
+    text-align: justify;
+    margin: 20px 60px; 
+}
+.grade{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 30px;
+}
+.single ol{
+    width: 275px;
+    color: white;
+    font-size: 18px;
+    text-align: left;
+    margin: 0 80px;
+}
+.video-frame iframe{
+    width: 450px;
+    height: 400px;
+}
+/*fin de generalidades*/
+
+/*Cowboy*/
+#box-cc{
+    background: linear-gradient(to bottom, #000000,#A0522D, #000);
+}
+#box-cc h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #e52f2f, #fff, #2057e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+#box-cc img{
+    width: 280px;
+    height: 276px;
+    border-radius: 40px;
+}
+#box-cc .elements iframe{
+    width: 560px;
+    height: 159px;
+}
+/*Fin de Cowboy*/
+
+/*Renaissence*/
+#box-rn{
+    background: linear-gradient(to top, #606161, #a7a7a7, #585858);
+}
+#box-rn h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #9A9A9A, #fff, #c0c0c0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+#box-rn img{
+    width: 280px;
+    height: 276px;
+    border-radius: 40px;
+}
+#box-rn .elements iframe{
+    width: 560px;
+    height: 159px;
+}
+/*Fin de Renaissance*/
+
+/*Blak is a king*/
+#box-bk{
+    background: linear-gradient(to top, #000, #FFD700, #000000);
+}
+#box-bk h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #e9a227, #868686, #e9a227);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+#box-bk img{
+    width: 280px;
+    height: 276px;
+    border-radius: 40px;
+}
+#box-bk .elements iframe{
+    width: 560px;
+    height: 159px;
+}
+/*Fin de Black is a King*/
+
+/*Lemonade*/
+#box-lm{
+    background: linear-gradient(to bottom, #000000,#A0522D, #000);
+}
+#box-lm h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #e9a227, #A0522D, #e9a227);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+#box-lm img{
+    width: 280px;
+    height: 276px;
+    border-radius: 40px;
+}
+#box-lm .elements iframe{
+    width: 560px;
+    height: 159px;
+}
+#box-lm .video-frame iframe{
+    width: 460px;
+    height: 200px;
+    margin: 20px 0;
+}
+/*Fin de Lemonade*/
+
+/*Beyonce Platinum*/
+#box-bc{
+    background: linear-gradient(to top, #000000, #4a098b, #d559c4, #4a098b, #000000);
+}
+#box-bc h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #9A9A9A, #fff, #c0c0c0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+#box-bc img{
+    width: 280px;
+    height: 276px;
+    border-radius: 40px;
+}
+#box-bc h3{
+    background: linear-gradient(90deg, #9A9A9A, #fff, #c0c0c0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin: 5px 80px;
+}
+#box-bc .elements iframe{
+    width: 560px;
+    height: 159px;
+}
+#box-bc .video-frame iframe{
+    width: 460px;
+    height: 200px;
+    margin: 20px 0;
+}
+/*Fin de Beyonce*/
+
+/*********************************************************************/
+/*********************************************************************/
+/************************Formulario Beyoncé***************************/
+/*********************************************************************/
+/*********************************************************************/
+.formulario {
+    width: 1100px;
+    height: 900px;
+    margin: 55px 100px;
+    display: inline-flex;
+    box-sizing: border-box;
+    padding: 0;
+}
+.blackout {
+    width: 580px;
+    height: 600px;
+    display: inline-flex;
+    margin: 0 50px;
+    box-sizing: border-box;
+}
+#mask-blakout {
+    width: 580px;
+    height: 600px;
+    margin: 50px auto;
+    padding: 0;
+    clip-path: url(#mask);
+}
+.fomr-info {
+    width: 490px;
+    height: 60px;
+    margin: 0 auto;
+}
+h2 {
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    text-align: justify;
+}
+p {
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.form {
+    width: 470px;
+    height: 66px;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+    box-sizing: border-box;
+}
+#form-group {
+    width: 465px;
+    height: 70px;
+    margin: 10px 0 20px 0;
+    padding: 20px 0;
+}
+#nombre, #email, #documantation {
+    width: 465px;
+    height: 40px;
+    text-decoration: none;
+    box-sizing: border-box;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #FFF;
+    background: rgba(217, 217, 217, 0.00);
+    margin: 20px 0;
+    padding: 10px 0;
+}
+label {
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    text-align: justify;
+    margin: 20px auto;
+}
+input {
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-size: 15px;
+    text-align: justify;
+}
+#nombre:focus, #email:focus, #documantation:focus {
+    border: 2px solid #FFF;
+    background: rgba(217, 217, 217, 0.00);
+}
+#nombre:hover, #email:hover, #documantation:hover {
+    border: 2px solid #FFF;
+    border-radius: 10px;
+    transform: translateY(-10px);
+    transition: 0.5s;
+    padding: 10px 0;
+}
+#form-select {
+    width: 470px;
+    margin: 40px 0 10px 0;
+}
+
+/* estilizo el select para que no vea feo */
+#document {
+    width: 200px;
+    height: 38px;
+    margin: 0 20px;
+    padding: 10px; /* Espacio interno */
+    border: 2px solid #9A9A9A; /* Borda */
+    border-radius: 5px; /* Bordas radius */
+    background: white; /* color de fundo */
+    appearance: none; /* saco la aparencia por defecto del select */
+    -webkit-appearance: none; /* saco la aparencia por defecto del select Chrome/Safari */
+    -moz-appearance: none; /* saco la aparencia por defecto del select Firefox */
+    font-size: 12px; /* fonte */
+}
+#archivo {
+    width: 470px;
+    height: 60px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+#archivo input[type="file"] {
+    width: 470px;
+    height: 80px;
+    margin: 0 20px;
+    padding: 10px; /* Espacio interno */
+}
+#archivo label:hover {
+    background-color: #e9e9e9;
+}
+
+#selection {
+    width: 465px;
+    height: 100px;
+    margin: 20px auto;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow-y: auto; /* Adiciona rolagem vertical se o conteúdo exceder a altura */
+}
+
+/* Estilo para el label principal */
+#selection .select-info {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+}
+
+/* Container do grid */
+#slct {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px; /* Espaçamento entre os elementos */
+}
+
+/* Estilizacion */
+#slct input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+#slct div {
+    margin: 10px;
+    align-items: center;
+    font-size: 12px;
+    color: white;
+}
+#form-mens {
+    width: 465px;
+    height: 150px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: block;
+}
+#form-mens label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: white;
+}
+#form-mens textarea {
+    display: block;
+    width: 465px;
+    height: 100px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 15px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    resize: none;
+}
+#form-send {
+    text-align: center; /* Centraliza o botão dentro do contêiner */
+}
+
+/* Estilos para o botão de envio */
+#form-send input[type="submit"] {
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    background: linear-gradient(0deg, #4E098B 0%, #150225 100%);
+    color: white;
+    font-size: 15px; /* Ajusta o tamanho da fonte */
+    font-weight: 600; /* Ajusta a espessura da fonte */
+    border: none; /* Remove a borda padrão */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+    text-align: center;
+    margin: 0 135px;
+}
+
+#form-send input[type="submit"]:hover {
+    background: linear-gradient(0deg, #6A13B2 0%, #2D013C 100%); /* Adiciona um efeito hover */
+}
+
+/*fin de formulario*/
+
+/*********************************************************************/
+/*********************************************************************/
+/************************Gracias action Bey***************************/
+/*********************************************************************/
+/*********************************************************************/
+#banner{
+    width: 100%;
+    height: 800px;
+    background: url(../image/Beyonce-gracias.jpg) no-repeat center;
+    max-width: 1920px;
+    padding: 0 100px;
+}
+#gracias-tt{
+    text-align: left;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Montserrat Subrayada";
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 100px 0;
+    background: linear-gradient(90deg, #666 -3.16%, #C0C0C0 50.75%, #333 104.66%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#honey{
+    color: #FFF;
+    text-align: right;
+    font-family: "Montserrat Subrayada";
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0 0 110px 0;
+}
+#bey{
+    text-align: left;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Montserrat Subrayada";
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: linear-gradient(0deg, #333 10.98%, #D9D9D9 98.07%); 
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0;
+}
+.button{
+    width: 345px;
+    height: 80px;
+    border-radius: 15px;
+    background: linear-gradient(0deg, #E351CF 0%, #000 100%);
+    text-align: center;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+button{
+    text-decoration: none;
+    background: none;
+    border: 0;
+}
+.button a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 40px;
+}
+.button:hover{
+    background: linear-gradient(0deg, #E351CF 0%, #FF00DC 50%, #000 100%);
+    color: #FFF;
+    text-shadow: 0px 4px 4px rgb(246, 246, 246);
+}
+
+/* Fin de Gracias action*/ 
+@media screen and (max-width: 800px){
+    main, section{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        width: 100%;
+        max-width: 800px;
+    }
+    /*Navegation menu*/
+    header {
+        width: auto;
+        height: 200px;
+        display: flex;
+        padding: 0 20px;
+        z-index: 1;
+        position: relative;
+    }
+    
+    .logo_gray {
+        width: 200px;
+        height: 100px;
+        margin: 33px 0 33px 100px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        display: inline-flex;
+        align-items: center;
+        z-index: 2;
+    }
+    
+    #navegation {
+        display: none;
+        width: 100%;
+        height: 100vh; /* Ajustado para ocupar toda a altura da tela */
+        background-color: #6A13B2;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999; /* Aumentado para garantir que esteja por cima de todos os outros elementos */
+        overflow-y: auto;
+    }
+    
+    #navegation:target {
+        display: block;
+    }
+    
+    #navegation li a{
+        display: block;
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+        color: white;
+        font-size: 30px;
+        z-index: 3;
+    }
+    
+    nav ul li ul.dropdown {
+        display: none !important; /* Desativar dropdown de discografia */
+    }
+    
+    #nav-bar {
+        display: flex;
+        background: url(../image/resposive_image/nav-bar.png) no-repeat;
+        width: 40px;
+        height: 35px;
+        margin: 20px 10px 20px 0;
+        background-size: contain;
+        z-index: 2;
+        position: absolute;
+        top: 50px;
+        right: 5px;
+    }
+    
+    #nav-bar, a {
+        font-size: 0;
+    }
+    
+    #cerrar {
+        display: none;
+        background: url(../image/resposive_image/close.png) no-repeat; /* Defina a URL da imagem para o ícone de fechar */
+        width: 40px;
+        height: 35px;
+        background-size: contain;
+        z-index: 2;
+        position: absolute;
+        top: 50px;
+        right: 5px;
+    }
+    
+    #navegation:target #nav-bar {
+        display: none;
+    }
+    
+    #navegation:target #cerrar {
+        display: block;
+    }
+    
+    /*Footer*/
+    footer {
+        flex-direction: column;
+    }
+
+    #designer {
+        margin-bottom: 10px;
+    }
+    .copyright p{text-align: center;}
+    #socialmidia {
+        margin-bottom: 10px;
+    }
+    /*********************************************************************/
+    /*********************************************************************/
+    /************************     Home Page    ***************************/
+    /*********************************************************************/
+    /*********************************************************************/
+    .hijos .blueive,
+    .hijos .rumi,
+    .hijos .sir{transition: none;}
+    .hijos .blueive:hover,
+    .hijos .rumi:hover,
+    .hijos .sir:hover{transform: none;}
+    .gallery{display: none;}
+    /*********************************************************************/
+    /*********************************************************************/
+    /************************   Discografia    ***************************/
+    /*********************************************************************/
+    /*********************************************************************/
+    
+    .container-disco{
+        width: 100%;
+        height: 5218px;
+        margin: 30px 0;
+    }
+    .container-disco h1{
+        font-size: 4em;
+    }
+    #box-rn, #box-bk, #box-lm{
+        width: 100%;
+        height: 950px;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        padding: 0;
+        margin: 0;
+    }
+    .elements{
+        margin: 10px 0;
+        padding: 0  40px;
+    }
+    .elements iframe{
+        border: none;
+        padding-top: 50px;
+    }
+    .box-txt{
+        width: 100%;
+        display: flex;
+    }
+    .box-txt p{
+        font-size: 1.5em;
+        color: white;
+        text-align: justify;
+        margin: 20px 60px; 
+    }
+    .grade{
+        margin: 0 10px;
+    }
+    .single ol{
+        width: 275px;
+        color: white;
+        font-size: 1.2em;
+        text-align: left;
+        margin: 0 60px;
+    }
+    .video-frame iframe{
+        width: 350px;
+        height: 400px;
+    }
+    #box-cc, #box-bc{
+        width: 100%;
+        height: 1150px;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        padding: 0;
+        margin: 0;
+    }
+    #box-cc img{
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+    }
+    #box-cc .elements iframe{
+        width: 450px;
+        height: 250px; 
+    } /************ Find de Cowboy Carter**********/
+    #box-rn img{
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+    }
+    #box-rn .elements iframe{
+        width: 450px;
+        height: 250px; 
+    }
+    #box-rn .grade .video-frame iframe{
+        width: 350px;
+        height: 250px;
+    } /************ Find de Renaissance **********/
+    #box-bk img{
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+    }
+    #box-bk .elements iframe{
+        width: 450px;
+        height: 250px; 
+    }
+    #box-bk .elements iframe{
+        width: 450px;
+        height: 250px; 
+    }
+    #box-bk .grade .video-frame iframe{
+        width: 350px;
+        height: 250px;
+    }/************ Find de Black is a king**********/
+    #box-lm img{
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+    }
+    #box-lm .elements iframe{
+        width: 450px;
+        height: 250px; 
+    }
+    #box-lm .elements iframe{
+        width: 450px;
+        height: 250px; 
+    }
+    #box-lm .grade .video-frame iframe{
+        width: 350px;
+        height: 150px;
+    } /************ Find de Lemonade**********/
+    #box-bc img{
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+    }
+    #box-bc .elements iframe{
+        width: 450px;
+        height: 250px; 
+    }
+    #box-bc .elements iframe{
+        width: 450px;
+        height: 250px; 
+    }
+    #box-bc .grade .video-frame iframe{
+        width: 350px;
+        height: 150px;
+    }/************ Find de Beyonce**********/
+    
+    /*********************************************************************/
+    /*********************************************************************/
+    /************************    Formulario    ***************************/
+    /*********************************************************************/
+    /*********************************************************************/
+
+    .formulario {
+        width: 80%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 0 50px;
+    }
+    .formulario h1{
+        text-align: center;
+        font-size: 30px;
+    }
+    .blackout, #mask-blakout {
+        display: none;
+    }
+    .form-border {
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        margin: 0;
+        display: flex;
+    }
+    .fomr-info {
+        width: 100%;
+        height: 40px;
+        margin: 10px 0;
+    }
+    .formu {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    #form-group {
+        width: 100%;
+        padding: 0;
+        margin: 40px 0;
+    }
+    #form-group label {
+        width: 80%;
+        font-size: 20px;
+        margin: 40px auto;
+    }
+    #form-group input {
+        width: 100%;
+        height: 40px;
+        margin: 20px auto;
+    }
+    #form-select label {
+        width: 100%;
+        height: auto;
+    }
+    #form-select select {
+        width: 80%;
+        height: 40px;
+        margin: 0;
+    }
+    #archivo {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+    #selection{
+        width: 80%;
+        height: auto;
+        margin: 10px auto;
+    }
+    #form-mens{
+        width: 100%;
+    }
+    #form-mens label{
+        width: 80%;
+        font-size: 20px;
+    }
+    #form-mens #message {
+        width: 100%;
+        height: 100px;
+        margin: 10px 0;
+    }
+    #form-send input[type="submit"] {
+        width: 600px;
+        height: 100px;
+        margin: 10px 0;
+        font-size: 40px;
+    }
+    /*********************************************************************/
+    /*********************************************************************/
+    /************************  Gracias Action  ***************************/
+    /*********************************************************************/
+    /*********************************************************************/
+    #banner{
+        width: 100%;
+        height: 1000px;
+        background-image: url(../image/resposive_image/beyoncé-gracias-tablet.jpg) no-repeat center;
+        max-width: 800px;
+        padding: 0 100px;
+        margin: 0;
+    }
+    #gracias-tt{
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        background: linear-gradient(90deg, #FFF -3.16%, #ffffff 50.75%, #FFF 104.66%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    #honey{
+        text-align: left;
+    }
+    #bey{
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        background: linear-gradient(90deg, #FFF -3.16%, #ffffff 50.75%, #FFF 104.66%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+@media screen and (max-width: 500px) {
+    main, section{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        width: 100%;
+        height: auto;
+        min-width: 320px;
+        max-width: 500px;
+        overflow-x: hidden;
+    }
+    header {
+        width: 100%;
+        height: 200px;
+        background-color: black;
+        display: flex;
+        padding: 0 20px;
+        z-index: 1;
+        position: relative;
+    }
+    
+    .logo_gray {
+        width: 200px;
+        height: 100px;
+        margin: 33px 0 33px 100px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        display: inline-flex;
+        align-items: center;
+        z-index: 2;
+    }
+    
+    #navegation {
+        display: none;
+        width: 100%;
+        height: 100vh; /* Ajustado para ocupar toda a altura da tela */
+        background-color: #6A13B2;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999; /* Aumentado para garantir que esteja por cima de todos os outros elementos */
+        overflow-y: auto;
+    }
+    
+    #navegation:target {
+        display: block;
+    }
+    
+    #navegation li a{
+        display: block;
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+        color: white;
+        font-size: 30px;
+        z-index: 3;
+    }
+    
+    #nav-bar {
+        display: flex;
+        background: url(../image/resposive_image/nav-bar.png) no-repeat;
+        width: 40px;
+        height: 35px;
+        margin: 20px 10px 20px 0;
+        background-size: contain;
+        z-index: 2;
+        position: absolute;
+        top: 50px;
+        right: 5px;
+    }
+    
+    #nav-bar, a {
+        font-size: 0;
+    }
+    
+    
+    #designer ul li,
+    footer .copyright p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    
+    /*********************************************************************/
+    /*********************************************************************/
+    /************************     Home Page    ***************************/
+    /*********************************************************************/
+    /*********************************************************************/
+
+    
+    .as_back{
+        width: 100%;
+        height: 215px;
+        min-width: 320px;
+        max-width: 500px;
+    }
+    .as_back h1{
+        text-align: center;
+        font-size: 2.5em;
+        margin-top: 30px;
+    }
+    .container {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .foto-bey {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    .biography {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25);
+        margin: 0;
+    }
+
+    .life {
+        width: 100%;
+        height: auto;
+        grid-template-columns: 1fr;
+        margin: 0;
+        padding: 0;
+    }
+
+    .life-perso {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25);
+    }
+
+    .hijos {
+        width: 100%;
+        height: auto;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .hijos img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        padding: 0;
+        margin: 20px auto;
+    }
+
+    .hijos .blueive:hover,
+    .hijos .rumi:hover,
+    .hijos .sir:hover {
+        transform: none;
+    }
+    
+    /*Genero*/
+    #genero{
+        width: 100%;
+        height: auto;
+        margin: 50px 0 0 0;
+        padding: 0;
+        border-radius: 0;
+    }
+    #genero h2{
+        font-size: 2em;
+    }
+    .genero-box{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0 40px;
+    }
+    .genero-box h3{
+        font-size: 1.5em;
+        text-align: center;
+    }
+    .genero-box p{
+        font-size: 1em;
+        text-align: left;
+    }
+    .genero-box li{
+        font-size: 1em;
+        text-align: left;
+    }
+    .ryb-txt{
+        font-size: 2em;
+    }
+    .ryb{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0 40px 40px 40px;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .ryb-descripcion, .ryb-origen, .ryb-caracteristica{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 10px;
+        border-radius: 0;
+    }
+    .ryb-descripcion:hover, .ryb-origen:hover, .ryb-caracteristica:hover{
+        transform: none;
+        box-shadow: none;
+        transition: none; 
+        border: none; 
+    }
+    /*Discografia e Carrousel*/
+    .discografia {
+        width: 100%;
+        margin: 50px auto;
+        padding: 40px;
+        border-radius: 0;
+    }
+
+    .discografia .ds__info h2 {
+        font-size: 4em;
+    }
+
+    .discografia .ds__info p {
+        font-size: 1em;
+        text-align: left;
+    }
+
+    .carousel {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-slide {
+        width: 100%;
+        max-width: 285px;
+        height: auto;
+    }
+
+    .carousel-image {
+        width: 100%;
+        max-width: 285px;
+        height: auto;
+    }
+
+    .carousel-button {
+        padding: 5px;
+    }
+
+    /*Renaissance Tour*/
+    .renaissence{
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        padding: 0 40px;
+    }
+    .renaissence h2 {
+        font-size: 3em;
+    }
+
+    .renaissence p {
+        font-size: 1em;
+        text-align: left;
+    }
+
+    .video,
+    iframe {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        border: 0;
+    }
+    .gallery{
+        display: none;
+    }
+    /*********************************************************************/
+    /*********************************************************************/
+    /************************   Discografia    ***************************/
+    /*********************************************************************/
+    /*********************************************************************/
+    
+    .container-disco {
+        width: 100%;
+        height: auto;
+        margin: 20px 0 0 0;
+        min-width: 320px;
+        max-width: 500px;
+    }
+    .container-disco h1 {
+        font-size: 2em;
+        margin: 0;
+    }
+    #box-cc, #box-rn, #box-bk, #box-lm, #box-bc {
+        width: 100%;
+        height: auto;
+        padding: 0 20px;
+    }
+    .elements {
+        margin: 10px 0;
+        padding: 0 20px;
+    }
+    .elements iframe {
+        display: none;
+    }
+    .box-txt {
+        width: 100%;
+        display: flex;
+    }
+    .box-txt p {
+        font-size: 1em;
+        color: white;
+        text-align: justify;
+        margin: 10px 30px;
+    }
+    .grade {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 30px;
+    }
+    .single ol {
+        width: 100%;
+        color: white;
+        font-size: 1em;
+        text-align: left;
+        margin: 0 20px;
+    }
+    .video-frame iframe {
+        width: 100%;
+        height: 150px;
+    }/* Cowboy Carter */
+    #box-cc img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        align-items: center;
+    }
+    #box-cc .elements iframe{
+        width: 450px;
+        height: 250px; 
+    } /************ Fin de Cowboy Carter**********/
+    #box-rn img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        align-items: center;
+    }
+    #box-rn .elements iframe{
+        width: 450px;
+        height: 250px; 
+    }
+    #box-rn .grade .video-frame iframe{
+        width: 100%;
+        height: 250px;
+    } /************ Fin de Renaissance **********/
+    #box-bk img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        align-items: center;
+    }
+    #box-bk .grade .video-frame iframe{
+        width: 100%;
+        height: 250px;
+    }/************ Find de Black is a king**********/
+    #box-lm img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        align-items: center;
+    }
+    #box-lm .grade .video-frame iframe{
+        width: 100%;
+        height: 150px;
+    } /************ Find de Lemonade**********/
+    #box-bc img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        align-items: center;
+    }
+    #box-bc .grade .video-frame iframe{
+        width: 100%;
+        height: 150px;
+    }/************ Find de Beyonce**********/
+    
+    
+    /*********************************************************************/
+    /*********************************************************************/
+    /************************    Formulario    ***************************/
+    /*********************************************************************/
+    /*********************************************************************/
+
+    
+    h1{
+        height: 215px;
+        min-width: 320px;
+        max-width: 480px;
+        font-size: 30px;
+        margin: 30px 0 0 0;
+    }
+    .formulario{
+        width: 100%;
+        height: 1300px;
+        margin: 0;
+        padding: 0 40px;
+        box-sizing: border-box;
+        min-width: 320px;
+    }
+    .blackout, #mask-blakout, #mask{
+        display: none;
+    }
+    .form-border{
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        margin: 0;
+        display: flex;
+    }
+    .fomr-info{
+        width: 100%;
+        height: 90px;
+        margin: 10px 10px;
+    }
+    .formu{
+        width: 100%;
+        height: 950px;
+    }
+    #form-group{
+        width: 100%;
+        padding: 0;
+    }
+    #form-group label{
+        font-size: 20px;
+        margin: 0 0 10px 0;
+    }
+    #form-group input{
+        width: 80%;
+        height: 40px;
+
+    }
+    #form-select label{
+        width: 100%;
+        height: 50px;
+    }
+    #form-select select{
+        width: 150px;
+        height: 40px;
+        margin: 10px 0 0 0;
+        padding: 0 20px;
+    }
+    #archivo{
+        width: 100%;
+        height: 40px;
+        margin: 20px 0 30px 0;
+    }
+    #form-send input[type="submit"] {
+        width: 320px;
+        height: 100px;
+        margin: 10px 0;
+        font-size: 30px;
+    }
+
+    /*********************************************************************/
+    /*********************************************************************/
+    /************************  Gracias Action  ***************************/
+    /*********************************************************************/
+    /*********************************************************************/
+    #banner{
+        width: 500px;
+        height: 737px;
+        background: url(../image/resposive_image/beyonce-gracias-mobile.jpg) no-repeat center;
+        max-width: 500px;
+        padding: 0 40px;
+        margin: 0;
+    }
+    .gracias{
+        margin: 0;
+        padding: 0;
+    }
+    #gracias-tt{
+        font-size: 2em;
+    }
+    #honey{
+        font-size: 1.5em;
+    }
+    #bey{
+        font-size: 1.5em;
+    }
+    .button{
+        width: 200px;
+        height: 44.872px;
+        margin: 100px auto;
+    }
+    .button a{
+        font-size: 1em;
+    }
+}

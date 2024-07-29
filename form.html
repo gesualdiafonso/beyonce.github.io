@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyonce</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div><a href="index.html" class="logo_gray"></a></div>
+        <nav>
+            <a href="#navegation" id="nav-bar">Menu</a>
+            <ul id="navegation">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown"><a href="discografy.html">Discografia</a>
+                    <ul class="dropdown">
+                        <li><a href="discografy.html#cowboy">Cowboy Carter</a></li>
+                        <li><a href="discografy.html#renaissance">Renaissance</a></li>
+                        <li><a href="discografy.html#black">Black is a King</a></li>
+                        <li><a href="discografy.html#lemonade">Lemonade</a></li>
+                        <li><a href="discografy.html#beyonce">BEYONCÉ</a></li>
+                    </ul>
+                </li>
+                <li><a href="form.html">Formulario</a></li>
+                <li><a href="#designer">Designer</a></li>
+                <li><a href="#" id="close">Cerrar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <h1>Beyoncé en Argentina?</h1>
+        <section>
+            <div class="formulario">
+                <section>
+                    <div class="blackout">
+                        <img id="mask-blakout" src="image/beyonce-svg.jpg" alt="Beyonce Lemonade">
+                        <svg>
+                            <clipPath id="mask">
+                                <path d="M0 12.3977H57V455.992H0V12.3977Z" fill="white"/>
+                                <path d="M69 124.405H162.949V568H69V124.405Z" fill="white"/>
+                                <path d="M241.449 22.5H335.398V540.275H241.449V22.5Z" fill="white"/>
+                                <path d="M456.051 0H513V443.595H456.051V0Z" fill="white"/>
+                                <path d="M348.5 161.905H442.449V605.5H348.5V161.905Z" fill="white"/>
+                                <path d="M174.551 0H231.5V443.595H174.551V0Z" fill="white"/>
+                                <path d="M522.551 161.905H579.5V605.5H522.551V161.905Z" fill="white"/>
+                            </clipPath>
+                        </svg>       
+                    </div>
+                </section>
+                <section>
+                    <div class="form-border"></div>
+                    <div class="fomr-info">
+                        <h2>Deseas saber las ultimas informaciones?</h2>
+                        <p>Inscribite ahora a nuestro newsletter.</p>
+                    </div>
+                    <div class="formu">
+                        <form action="gracias.html" method="post" enctype="multipart/form-data" name="form-beyonce">
+                            <div id="form-group">
+                                <label for="nombre">Nombre Completo:</label>
+                                <input type="text" name="nombre" id="nombre" placeholder="Su nombre completo" requerid>
+                            </div>
+                            <div id="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" name="email" id="email" placeholder="exameple@mail.com" required>
+                            </div>
+                            <div id="form-select">
+                                <label for="document">Seleccione un documento:</label>
+                                <select name="document" id="document">
+                                    <option value="su_documento" disabled selected>Seleccione su documento</option>
+                                    <option value="dni">DNI</option>
+                                    <option value="cuil">CUIL</option>
+                                    <option value="pasaport">Pasaporte</option>
+                                    <option value="otros">Otros</option>
+                                </select>
+                            </div>
+                            <div id="form-group">
+                                <label id="doc" for="documantation">Información de documentos:</label>
+                                <input type="text" name="documantation" id="documantation" placeholder="Información de documentos" required>
+                            </div>
+                            <div id="archivo">
+                                <label for="archivoInput">Documento foto:</label>
+                                <input type="file" name="archivo" id="archivoInput" required>
+                            </div>
+                            <div id="selection">
+                                <label class="select-info" for="selection">¿Qué gustaría de recibir de información?</label>
+                                <div id="slct">
+                                    <div>
+                                        <input type="checkbox" id="fechas-concierto" name="selection" value="1">
+                                        <label for="fechas-concierto">Fechas del Concierto.</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="renaissance-tour" name="selection" value="2">
+                                        <label for="renaissance-tour">Renaissance Tour.</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="merchandise" name="selection" value="3">
+                                        <label for="merchandise">Merchandise.</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="beygood" name="selection" value="4">
+                                        <label for="beygood">BeyGood ONG.</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="blm" name="selection" value="5">
+                                        <label for="blm">Black Lives Matter.</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="ivy-park" name="selection" value="6">
+                                        <label for="ivy-park">Ivy Park.</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="otro" name="selection" value="7">
+                                        <label for="otro">Otro</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="form-mens">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" cols="30" rows="10" placeholder="Caso ha seleccionado otro, nos envíe mas información..." maxlength="1500"></textarea>
+                            </div>
+                            <div id="form-send">
+                                <input type="submit" value="Enviar formulario"> 
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <section>
+            <div id="designer">
+                <ul>
+                    <li>Afonso Gesualdi</li>
+                    <li>Desarrollador y Programador Web</li>
+                    <li>Materia: Maquetado y Desarrollo Web</li>
+                    <li>Docente: Mabel Garcia</li>
+                    <li>Escuela de Artes y Multimidia Da Vinci</li>
+                </ul>
+            </div>
+            <div>
+                <ul id="socialmidia">
+                    <li><a href="https://www.instagram.com/beyonce/" target="_blank"><span id="ig"></span></a>
+                    </li>
+                    <li><a href="https://x.com/beyonce" target="_blank"><span id="tt"></span></a>
+                    </li>
+                    <li><a href="https://www.youtube.com/user/beyonce" target="_blank"><span id="ytb"></span></a>
+                    </li>
+                    <li><a href="https://beyonce.lnk.to/IIMOSTWANTED/applemusic" target="_blank"><span id="applemusic"></span></a>
+                    </li>
+                    <li><a href="https://open.spotify.com/intl-es/artist/6vWDO969PvNqNYHIOW5v0m?si=gp8zBoN0SW-sM4I0VzNxTA" target="_blank"><span id="spotify"></span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Beyoncé</p>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
